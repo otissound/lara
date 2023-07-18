@@ -1,5 +1,7 @@
 <?php
 
+
+use App\Http\Controllers\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::post('/register', [User::class, 'register']);
+Route::post('/reset-password', [User::class, 'resetPassword']);
+Route::post('/update-profile', [User::class, 'updateProfile']);
+Route::post('/update-profile-photo', [User::class,'updateProfilePhoto']);
