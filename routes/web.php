@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 
 
-Route::post('/register', [User::class, 'register']);
-Route::post('/reset-password', [User::class, 'resetPassword']);
-Route::post('/update-profile', [User::class, 'updateProfile']);
-Route::post('/update-profile-photo', [User::class,'updateProfilePhoto']);
+Route::get('/register', [User::class, 'register']);
+Route::get('/reset-password', [User::class, 'resetPassword']);
+Route::get('/update-profile', [User::class, 'updateProfile']);
+Route::get('/update-profile-photo', [User::class,'updateProfilePhoto']);
